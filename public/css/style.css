@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #D1E8E2;
     background-image: url('/images/landingpage.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
