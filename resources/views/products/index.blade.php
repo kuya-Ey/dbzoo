@@ -4,7 +4,7 @@
 <div class="container">
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <a class="btn btn-primary" href="/home" role="button">Back</a>
-        <button class="btn btn-primary" type="button">Button</button>
+        <button class="btn btn-primary" type="button">Update</button>
     </div>
 
     <div class="container d-flex gap-1 flex-wrap">
