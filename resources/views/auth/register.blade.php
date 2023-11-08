@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header bg-info">{{ __('Register') }}</div>
 
 
 
@@ -65,15 +65,20 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-info">
                                     {{ __('Register') }}
                                 </button>
+                                <a class="btn btn-info" href="/login" role="button">Back</a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
+            <div class="img-welcome justify-content-center">
+                <img src="{{ asset('/images/welcome-bg.png')}}" alt="">
+            </div>
         </div>
+
     </div>
 </div>
 @endsection

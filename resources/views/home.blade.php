@@ -114,12 +114,7 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="col-4 sidebar">
-            <div class="about"></div>
-            <div class="img-welcome">
-                <img src="{{ asset('/images/welcome-bg.png')}}" alt="">
-            </div>
-        </div> --}}
+        
     </div>
 </div>
 <div class="footer">

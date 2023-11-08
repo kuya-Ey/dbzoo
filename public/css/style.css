@@ -43,7 +43,7 @@ body {
 }
 
 .header {
-    background-color: bisque;
+    /* background-color: bisque; */
     height: 100px;
 }
 
@@ -53,7 +53,7 @@ body {
 
 .mainbar {
     display: flex;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     min-height: 650px;
     flex-wrap: wrap;
 }
