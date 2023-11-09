@@ -13,7 +13,7 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        //
+        ddd('this is index for groom');
     }
 
     /**
@@ -23,7 +23,7 @@ class GroomingServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('grooming_services.create');
     }
 
     /**

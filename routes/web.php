@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PetBoardingController;
+use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\GroomingServiceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +28,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // routes for products table
 Route::get('/products', [ProductController::class, 'index']);
+Route::get('/product/', [ProductController::class, 'create']);
+
+Route::get('/pet_boardings', [PetBoardingController::class, 'index']);
+Route::get('/pet_boarding/', [PetBoardingController::class, 'create']);
+
+Route::get('/consultations', [ConsultationController::class, 'index']);
+Route::get('/consultation/', [ConsultationController::class, 'create']);
+
+Route::get('/grooming_services', [GroomingServiceController::class, 'index']);
+Route::get('/grooming_service/', [GroomingServiceController::class, 'create']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PetBoarding;
 
 class PetBoardingController extends Controller
 {
@@ -13,7 +14,7 @@ class PetBoardingController extends Controller
      */
     public function index()
     {
-        //
+        ddd('this is index');
     }
 
     /**
@@ -23,7 +24,7 @@ class PetBoardingController extends Controller
      */
     public function create()
     {
-        //
+        return view('pet_boardings.create');
     }
 
     /**

@@ -3,18 +3,18 @@
 @section('content')
 <div class="container-fluid">
     {{-- <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header justify-content-md-end">{{ __('Dashboard') }}
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header justify-content-md-end">{{ __('Dashboard') }}
                     <!-- Right Side Of Navbar -->
                     {{--  --}}
+                    </div>
+
+
+
                 </div>
-
-
-
             </div>
         </div>
-    </div>
 
 </div>
 <div class="header">
@@ -67,7 +67,6 @@
         </div>
     </nav>
 
-
 </div>
 <div class="content">
     <div class="row">
@@ -83,7 +82,7 @@
                 <div class="card-body">
                   {{-- <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                  <a href="#" class="btn btn-primary col-12">CONSULTATION</a>
+                  <a href="/consultation/" class="btn btn-primary col-12">CONSULTATION</a>
                 </div>
             </div>
 
@@ -92,7 +91,7 @@
                 <div class="card-body">
                   {{-- <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                  <a href="#" class="btn btn-primary col-12">GROOMING SERVICE</a>
+                  <a href="/grooming_service/" class="btn btn-primary col-12">GROOMING SERVICE</a>
                 </div>
             </div>
 
@@ -101,7 +100,7 @@
                 <div class="card-body">
                   {{-- <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                  <a href="#" class="btn btn-primary col-12">PET BOARDING</a>
+                  <a href="/pet_boarding/" class="btn btn-primary col-12">PET BOARDING</a>
                 </div>
             </div>
 
@@ -114,7 +113,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 <div class="footer">
