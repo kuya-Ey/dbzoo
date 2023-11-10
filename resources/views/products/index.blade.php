@@ -8,7 +8,9 @@
                     <div class="navbar-brand mb-3 h1">D Barking Zoo</div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a class="btn btn-primary" href="/home" role="button">Back</a>
+
+                    <button class="btn btn-outline-primary" type="button" onclick="location.href='/home'">Back</button>
+                    {{-- <a class="btn btn-primary" href="/home" role="button">Back</a> --}}
                     <a class="btn btn-primary" href="/product/" role="button">Update</a>
                 </div>
                 </div>
@@ -23,8 +25,9 @@
             <h5 class="card-title">{{$product->name}}</h5>
             <p class="card-text">{{$product->description}}</p>
             <p class="card-text">{{$product->quantity}}</p>
-            <p class="card-text">{{$product->price}}</p>
+            <p class="card-text">{{ number_format($product->price, 2)}}</p>
             <p class="card-text">{{$product->category}}</p>
+            <a class="btn btn-primary" href="/product/{{ $product->id }}" role="button">VIEW</a>
 
             </div>
         </div>

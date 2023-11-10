@@ -14,6 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        // ORM - Object Relational Mapper
         // SELECT * FROM dbz_db2.products; from MySQL db
         $products = Product::all();
 
@@ -40,7 +41,33 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // INSERT INTO products (name, description, quantity, price, category, image)
+
+        $request->validate([
+            "name" => "required",
+            "desc" => "required",
+            "quantity" => "required",
+            "price" => "required",
+            "category" => "required",
+            "image" => "required|image|mimes:jpeg,png,jpg ",
+
+
+        ]);
+
+        $path = $request->file("image")->store("images", "public");
+
+
+        Product::create([
+            "name" => $request->name,
+            "description" => $request->desc,
+            "quantity" => $request->quantity,
+            "price" => $request->price,
+            "category" => $request->category,
+            "images"  => $path
+
+        ]);
+
+        return back();
     }
 
     /**
@@ -51,7 +78,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        // SELECT * FROM dbz_db2.products WHERE id = ();
+        $product = Product::find($id);
+
+        return view('products.show' , ['product' => $product]);
     }
 
     /**
@@ -62,7 +92,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        ddd('this is edit');
     }
 
     /**
