@@ -55,9 +55,9 @@
 </div>
 <div class="content">
     <div class="row">
-        <div class="col-4 me-3 p-5 sidebar">
+        <div class="col-4 p-5 sidebar">
             <div class="about" style="width: 30rem">
-                <p><strong>Welcome to D Barking Zoo Animal Clinic!</strong></p>
+                <p><strong><h3>Welcome to D Barking Zoo Animal Clinic!</h3></strong></p>
                 <p> We are a dedicated team of animal lovers who are passionate about providing top-quality veterinary care for your beloved pets. With a focus on compassion and expertise, we strive to ensure the health and well-being of all the animals that come through our doors.
 
                     At D Barking Zoo, we offer a range of veterinary services to meet the needs of your furry friends. From routine check-ups and vaccinations to surgeries and dental care, our experienced veterinarians are here to provide comprehensive and personalized care for your pets. We also provide nutritional and behavioral counseling to help your pets thrive.
@@ -70,38 +70,36 @@
             </div>
 
         </div>
-        <div class="col-5 mb-3 m-2 gap-4 p-4 position-relative start-0 justify-content-evenly mainbar">
+        <div class="col-5 gap-4 p-4 position-relative start-0 justify-content-evenly mainbar">
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('/images/vetconsultation.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body bg-info-subtle">
-                  {{-- <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                  <a href="/consultation/" class="btn btn-primary col-12">CONSULTATION</a>
+                    <a href="/consultation/" class="btn btn-primary col-12 mb-1 mt-2">CONSULTATION</a>
+                    <p class="tabinfo">From emergency care to routine check ups.</p>
                 </div>
             </div>
 
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('/images/petgrooming.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body bg-info-subtle">
-                  {{-- <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-                  <a href="/grooming_service/" class="btn btn-primary col-12">GROOMING SERVICE</a>
+                    <a href="/grooming_service/" class="btn btn-primary col-12 mb-1 mt-2">GROOMING SERVICE</a>
+                    <p class="tabinfo">Pet grooming with love.</p>
                 </div>
             </div>
 
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('/images/pethotel.png')}}" class="card-img-top" alt="...">
                 <div class="card-body bg-info-subtle">
-                  <span></span>
-                  <a href="/pet_boarding/" class="btn btn-primary col-12">PET BOARDING</a>
+                    <a href="/pet_boarding/" class="btn btn-primary col-12 mb-1 mt-2">PET BOARDING</a>
+                    <p class="tabinfo">Love and care for your pets while you're away.</p>
                 </div>
             </div>
 
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('/images/products.jpg')}}" class="card-img-top" alt="...">
                 <div class="card-body bg-info-subtle">
-                  <span style="color: red"><h6>*Products available in-store only.</h5></span>
-                  <a href="/products" class="btn btn-primary col-12">PET SUPPLIES</a>
+                    <a href="/products" class="btn btn-primary col-12 mb-1 mt-2">PET SUPPLIES</a>
+                    <p class="tabinfo" d-flex justify-content-center>*Products available in-store only.</p>
                 </div>
             </div>
         </div>
@@ -110,37 +108,39 @@
 </div>
 <div class="footer">
     <div class="row">
-        <div class="footer bg-primary col-3"></div>
-        <div class="footer bg-info col-3"></div>
-        <div class="footer bg-light col-3"></div>
-        <div class="footer bg-warning col-3"></div>
+        <div class="footer col-3">
+            <div class="d-grid mt-2 justify-content-center">
+                <span class="footerhead">Open daily:</span>
+                <p class="footer-detail">10AM - 7PM</p>
+            </div>
+        </div>
+        <div class="footer col-3">
+            <div class="d-grid mt-2 justify-content-center">
+                <span class="footerhead">OTIS BRANCH</span>
+                <p class="footer-detail">Otis 888 Paz Mendoza Guazon St., Otis Paco Manila</p>
+                <p class="footer-detail">0915-7090-337 / 8354-3958</p>
+            </div>
+        </div>
+        <div class="footer col-3">
+            <div class="d-grid mt-2 justify-content-center">
+                <span class="footerhead">SAMPALOC BRANCH</span>
+                <p class="footer-detail">262 M. Dela Fuente St., Sampaloc Manila</p>
+                <p class="footer-detail">09063342135 / 7000-0580</p>
+            </div>
+        </div>
+        <div class="footer col-3">
+            <div class="d-grid mt-2 justify-content-center">
+                <span class="footerhead">STA. MESA BRANCH</span>
+                <p class="footer-detail">3706 Lubiran St., Bacood Sta. Mesa</p>
+                <p class="footer-detail">0977-750-8720 / 7092-9288</p>
+            </div>
+        </div>
     </div>
 </div>
 
 
 
-    {{-- <div class="spinner-border float-end" role="status">
-        <span class="visually-hidden">Loading...</span>
-        <div aria-label="Orange and tan hamster running in a metal wheel" role="status" class="wheel-and-hamster">
-            <span class="visually-hidden">Loading...</span>
-            <div class="wheel"></div>
-            <div class="hamster">
-                <div class="hamster__body">
-                    <div class="hamster__head">
-                        <div class="hamster__ear"></div>
-                        <div class="hamster__eye"></div>
-                        <div class="hamster__nose"></div>
-                    </div>
-                    <div class="hamster__limb hamster__limb--fr"></div>
-                    <div class="hamster__limb hamster__limb--fl"></div>
-                    <div class="hamster__limb hamster__limb--br"></div>
-                    <div class="hamster__limb hamster__limb--bl"></div>
-                    <div class="hamster__tail"></div>
-                </div>
-            </div>
-            <div class="spoke"></div>
-        </div>
-    </div> --}}
+
 
 
 
