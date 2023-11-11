@@ -16,7 +16,7 @@
 
 <div class="w-50 ms-auto me-auto">
 
-    <form action={{url('pet_boarding')}} method='POST' enctype="multipart/form-data">
+    <form action={{url('consultation')}} method='POST' enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Date:</label>

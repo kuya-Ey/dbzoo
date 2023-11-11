@@ -1,23 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
-    {{-- <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header justify-content-md-end">{{ __('Dashboard') }}
-                    <!-- Right Side Of Navbar -->
-                    {{--  --}}
-                    </div>
 
-
-
-                </div>
-            </div>
-        </div>
-
-</div>
-<div class="header">
+<div class="header bg-info mb-4 pt-2">
     <nav class="navbar navbar-light">
         <div class="container position-relative">
             <div class="navbar-brand mb-0 h1">D Barking Zoo</div>

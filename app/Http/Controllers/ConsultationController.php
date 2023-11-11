@@ -35,7 +35,28 @@ class ConsultationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "date" => "required",
+            "time" => "required",
+            "fullname" => "required",
+            "petname" => "required",
+            "contactnumber" => "required",
+
+
+
+        ]);
+
+        Consultation::create([
+            "date" => $request->date,
+            "time" => $request->time,
+            "full_name" => $request->fullname,
+            "pet_name" => $request->petname,
+            "contact_number" => $request->contactnumber,
+
+
+        ]);
+
+        return back();
     }
 
     /**
