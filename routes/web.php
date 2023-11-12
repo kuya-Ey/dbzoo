@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ConsultationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // routes for products table
 Route::get('/products', [ProductController::class, 'index']);
+
+
+Route::get('/consultation', [ConsultationController::class,"index"]);

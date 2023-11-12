@@ -13,7 +13,7 @@ class ConsultationController extends Controller
      */
     public function index()
     {
-        //
+        return view("consultation.index");
     }
 
     /**
