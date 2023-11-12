@@ -13,7 +13,7 @@
                     </div>
                 @endif
 
-                {{ __('You are logged in!') }}
+                {{ __('Welcome back, dear guest!') }}
             </div>
         <ul class="navbar-nav ms-auto">
             <!-- Authentication Links -->

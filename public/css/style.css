@@ -218,8 +218,8 @@ body {
 
   /* product.show */
   .card2 {
-    height: 600px;
-    width: 490px;
+    height: 550px;
+    width: 690px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 16px;

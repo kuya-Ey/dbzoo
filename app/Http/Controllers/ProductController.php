@@ -67,7 +67,7 @@ class ProductController extends Controller
 
         ]);
 
-        return back();
+        return back()->with('success', 'Inventory updated.');
     }
 
     /**

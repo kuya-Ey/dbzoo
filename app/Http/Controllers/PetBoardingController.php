@@ -59,7 +59,7 @@ class PetBoardingController extends Controller
 
         ]);
 
-        return back();
+        return back()->with('success' , ('Reservation completed.'));
     }
 
     /**

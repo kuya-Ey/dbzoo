@@ -19,36 +19,59 @@
     <form action={{url('product')}} method='post' enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Name:</label>
-          <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="exampleInputEmail1" aria-describedby="emailHelp">
+            @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Description:</label>
-          <input type="text" class="form-control" name="desc" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label label for="exampleInputEmail1" class="form-label">Description:</label>
+            <input type="text" class="form-control" name="desc" value="{{ old('desc') }}" id="exampleInputEmail1" aria-describedby="emailHelp">
+                @error('desc')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
         </div>
         <div class="mb-3">
             <div class="d-flex gap-3">
                 <div class="flex-grow-1">
                     <label for="exampleInputEmail1" class="form-label">Quantity:</label>
-                    <input type="text" class="form-control" name="quantity" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="quantity" value="{{ old('quantity') }}" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('quantity')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="flex-grow-1">
                     <label for="exampleInputEmail1" class="form-label">Price:</label>
-                    <input type="text" class="form-control" name="price" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" name="price" value="{{ old('price') }}" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('price')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
 
             </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Category:</label>
-          <input type="text" class="form-control" name="category" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Category:</label>
+            <input type="text" class="form-control" name="category" value="{{ old('category') }}" id="exampleInputEmail1" aria-describedby="emailHelp">
+            @error('category')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Images:</label>
-          <input type="file" name="image" class="form-control" id="exampleCheck1">
+            <label for="exampleInputEmail1" class="form-label">Images:</label>
+            <input type="file" name="image" value="{{ old('image')}}" class="form-control" id="exampleCheck1">
+            @error('image')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button type="submit" class="btn btn-primary mb-3">Submit</button>
+    </form>
+    @if(session('success'))
+        <h3 class="alert alert-success">
+            {{ session('success') }}
+        </h3>
+    @endif
 
 
     </div>
