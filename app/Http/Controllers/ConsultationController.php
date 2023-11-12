@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Consultation;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ConsultationController extends Controller
 {
@@ -14,7 +15,8 @@ class ConsultationController extends Controller
      */
     public function index()
     {
-        ddd('this is index');
+        return view("consultations.index");
+        // ddd('this is index');
     }
 
     /**
@@ -45,6 +47,9 @@ class ConsultationController extends Controller
 
 
         ]);
+        // dd(Auth::id());
+
+
 
         Consultation::create([
             "date" => $request->date,
@@ -52,6 +57,7 @@ class ConsultationController extends Controller
             "full_name" => $request->fullname,
             "pet_name" => $request->petname,
             "contact_number" => $request->contactnumber,
+            "users" => Auth::id(),
 
 
         ]);

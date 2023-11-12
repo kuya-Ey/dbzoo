@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-
+<di
 <div class="header bg-info mb-4 pt-2">
     <nav class="navbar navbar-light">
         <div class="container position-relative">
-            <div class="navbar-brand mb-2 h1">D Barking Zoo</div>
+            <div class="navbar-brand mb-2 h1">D Barking Zoo</di>
             <div class="card-body position-absolute top-0 start-50">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -143,6 +143,3 @@
 
 
 
-
-
-@endsection
