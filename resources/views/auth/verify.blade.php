@@ -24,5 +24,8 @@
             </div>
         </div>
     </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-center">
+        <img src="{{ asset('/images/welcome-bg.png')}}" alt="">
+    </div>
 </div>
 @endsection

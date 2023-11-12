@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PetBoarding;
 
 class PetBoardingController extends Controller
 {
@@ -13,7 +14,7 @@ class PetBoardingController extends Controller
      */
     public function index()
     {
-        //
+        ddd('this is index');
     }
 
     /**
@@ -23,7 +24,7 @@ class PetBoardingController extends Controller
      */
     public function create()
     {
-        //
+        return view('pet_boardings.create');
     }
 
     /**
@@ -34,7 +35,31 @@ class PetBoardingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "fullname" => "required",
+            "petname" => "required",
+            "contactnumber" => "required",
+            "start" => "required",
+            "end" => "required",
+            "remarks" => "required",
+
+
+
+        ]);
+
+        PetBoarding::create([
+            "full_name" => $request->fullname,
+            "pet_name" => $request->petname,
+            "contact_number" => $request->contactnumber,
+            "started_at" => $request->start,
+            "ended_at" => $request->end,
+            "remarks" => $request->remarks,
+
+
+
+        ]);
+
+        return back();
     }
 
     /**

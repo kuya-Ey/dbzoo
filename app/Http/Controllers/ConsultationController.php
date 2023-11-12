@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Consultation;
 
 class ConsultationController extends Controller
 {
@@ -14,6 +15,7 @@ class ConsultationController extends Controller
     public function index()
     {
         return view("consultation.index");
+        // ddd('this is index');
     }
 
     /**
@@ -23,7 +25,7 @@ class ConsultationController extends Controller
      */
     public function create()
     {
-        //
+        return view('consultations.create');
     }
 
     /**
@@ -34,7 +36,28 @@ class ConsultationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "date" => "required",
+            "time" => "required",
+            "fullname" => "required",
+            "petname" => "required",
+            "contactnumber" => "required",
+
+
+
+        ]);
+
+        Consultation::create([
+            "date" => $request->date,
+            "time" => $request->time,
+            "full_name" => $request->fullname,
+            "pet_name" => $request->petname,
+            "contact_number" => $request->contactnumber,
+
+
+        ]);
+
+        return back();
     }
 
     /**

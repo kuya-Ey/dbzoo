@@ -48,7 +48,35 @@ body {
 }
 
 .content {
-    min-height: 650px;
+    min-height: 600px;
+}
+
+.about {
+    padding: 20px;
+    height: 600px;
+    justify-content: flex-start;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    -o-border-radius: 7px;
+    border: 1px solid #19747E;
+    background-color: #19747E;
+    color: #e2e2e2;
+    overflow: hidden;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+          -4px -4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .mainbar {
@@ -58,7 +86,187 @@ body {
     flex-wrap: wrap;
 }
 
-.footer {
-    background-color: chartreuse;
-    height: 80px;
+.card {
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+          -4px -4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    cursor: pointer;
 }
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+    color: #E2E2E2;
+    font-weight: 500;
+}
+
+.btn {
+    color: #E2E2E2;
+    font-weight: 600;
+}
+
+.tabinfo {
+    color: #19747E;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer {
+    background-color: #19747E;
+    height: 120px;
+}
+
+.footerhead {
+    font-size: 16px;
+    font-weight: 600;
+    color: #D4D4D4;
+}
+
+.footerhead:hover {
+    color: #E2E2E2;
+}
+
+.footer-detail {
+    font-size: 14px;
+    font-weight: 400;
+    color: #D4D4D4;
+}
+
+.footer-detail:hover {
+    color: #E2E2E2;
+}
+
+/* products.card2 */
+
+.card1 {
+    width: 290px;
+    height: 355px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 1px solid #19747E;
+    -webkit-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+    overflow: visible  ;
+  }
+
+  .card-details {
+    color: #19747E;
+    height: 150%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .card-button {
+    text-decoration: none;
+    text-align: center;
+    -webkit-transform: translate(-50%, 125%);
+    -ms-transform: translate(-50%, 125%);
+    transform: translate(-50%, 125%);
+    width: 70%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #19747E;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .text-body {
+    color: rgb(134, 134, 134);
+  }
+
+  /*Text*/
+  .text-title {
+    font-size: 1em;
+    font-weight: 500;
+  }
+
+  /*Hover*/
+  .card1:hover {
+    border-color: #19747E;
+    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+  }
+
+  .card1:hover .card-button {
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    opacity: 1;
+  }
+
+  /* product.show */
+  .card2 {
+    height: 600px;
+    width: 490px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+  }
+
+   /*Image*/
+  .card-image2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #A9D6E5;
+    background: linear-gradient(to top, #D1E8E2, #A9D6E5);
+  }
+
+  /*Description */
+  .card-description2 {
+    display: flex;
+    position: absolute;
+    gap: .5em;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: #19747E;
+    height: 60%;
+    bottom: 0;
+    border-radius: 16px;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 2rem;
+  }
+
+  /*Text*/
+  .text-title2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .text-body2 {
+    font-size: 1rem;
+    line-height: 130%;
+  }
+
+
+  /* Hover states */
+  .card2:hover .card-description2 {
+    transform: translateY(100%);
+  }
+
+

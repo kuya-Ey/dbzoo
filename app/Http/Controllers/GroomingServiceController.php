@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\GroomingService;
 
 class GroomingServiceController extends Controller
 {
@@ -13,7 +14,7 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        //
+        ddd('this is index for groom');
     }
 
     /**
@@ -23,7 +24,7 @@ class GroomingServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('grooming_services.create');
     }
 
     /**
@@ -34,7 +35,31 @@ class GroomingServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "fullname" => "required",
+            "address" => "required",
+            "contactnumber" => "required",
+            "date" => "required",
+            "time" => "required",
+            "remarks" => "required",
+
+
+
+        ]);
+
+        GroomingService::create([
+            "full_name" => $request->fullname,
+            "address" => $request->address,
+            "contact_number" => $request->contactnumber,
+            "date" => $request->date,
+            "time" => $request->time,
+            "remarks" => $request->remarks,
+
+
+
+        ]);
+
+        return back();
     }
 
     /**
