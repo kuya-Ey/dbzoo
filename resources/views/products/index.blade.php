@@ -1,5 +1,5 @@
+{{-- resources/views/products/index.blade.php  --}}
 @extends('layouts.app')
-
 @section('content')
 <div class="container-fluid">
         <div class="header">
@@ -9,13 +9,18 @@
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-                    <button class="btn btn-primary" type="button" onclick="location.href='/home'">Return</button>
+                    <button class="btn btn-outline-primary" type="button" onclick="location.href='/home'">Return</button>
                     <a class="btn btn-primary" href="/product/" role="button">Update</a>
                 </div>
                 </div>
             </nav>
         </div>
 
+        @if (session('success'))
+            <div class="alert alert-success text-center">
+                {{session('success')}}
+            </div>
+        @endif
     <div class="container d-flex gap-4 flex-wrap">
         @foreach ($products as $product)
         <div class="card1">

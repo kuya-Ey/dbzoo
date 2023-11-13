@@ -1,9 +1,11 @@
 <?php
+// app/Http/Controllers/ProductController.php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -63,7 +65,8 @@ class ProductController extends Controller
             "quantity" => $request->quantity,
             "price" => $request->price,
             "category" => $request->category,
-            "images"  => $path
+            "images"  => $path,
+            'users' => Auth::id()
 
         ]);
 
@@ -92,7 +95,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        ddd('this is edit');
+
+        $product = Product::find($id);
+        return view('products.edit', ['product' => $product]);
     }
 
     /**
@@ -102,9 +107,28 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         //
+        request()->validate([
+            "name" => "required",
+            "desc" => "required",
+            "quantity" => "required",
+            "price" => "required",
+            "category" => "required",
+        ]);
+
+        $product = Product::find($id);
+
+        $product->name = request()->name;
+        $product->description = request()->desc;
+        $product->quantity = request()->quantity;
+        $product->price = request()->price;
+        $product->category = request()->category;
+
+        $product->save();
+
+        return redirect(url()->current())->with('success', 'Product Update.');
     }
 
     /**
@@ -115,6 +139,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $product = Product::destroy($id);
+
+       return redirect('/products')->with('success', 'Product Deleted.');
     }
 }

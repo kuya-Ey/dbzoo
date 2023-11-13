@@ -1,5 +1,5 @@
 <?php
-
+// routes/web.php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PetBoardingController;
@@ -67,5 +67,5 @@ Route::get('/product/', [ProductController::class, 'create']);
 Route::get('/product/{id}/edit', [ProductController::class, 'edit']);
 
 Route::post('/product', [ProductController::class, 'store']);
-Route::put('/product/{id}/edit', [ProductController::class, 'update']);
-Route::delete('/product/{id}', [ProductController::class, 'destroy']);
+Route::put('/product/{id}', [ProductController::class, 'update']);
+Route::delete('/product/{id}',[ProductController::class, 'destroy']);
