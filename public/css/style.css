@@ -8,30 +8,26 @@
 }
 
 body {
-    /* display: flex; */
     width: 100vw;
     height: 100vh;
-    /* align-items: center; */
-    /* justify-content: center; */
     font-family: 'Poppins', sans-serif;
     background: #D1E8E2;
+    /* background-image: url('/images/landingpage.png');
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.landing {
     background-image: url('/images/landingpage.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-/* .container {
-    width: 100vw;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-} */
-
 .login {
     width: 400px;
     position: fixed;
-    bottom: 100px;
-    left: 100px;
+    bottom: 150px;
+    left: 150px;
 }
 
 .img-welcome {
@@ -43,7 +39,6 @@ body {
 }
 
 .header {
-    /* background-color: bisque; */
     height: 100px;
 }
 
@@ -81,7 +76,6 @@ body {
 
 .mainbar {
     display: flex;
-    /* background-color: antiquewhite; */
     min-height: 650px;
     flex-wrap: wrap;
 }

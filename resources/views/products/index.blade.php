@@ -9,7 +9,7 @@
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-                    <button class="btn btn-outline-primary" type="button" onclick="location.href='/home'">Return</button>
+                    <button class="btn btn-primary" type="button" onclick="location.href='/home'">Return</button>
                     <a class="btn btn-primary" href="/product/" role="button">Update</a>
                 </div>
                 </div>
