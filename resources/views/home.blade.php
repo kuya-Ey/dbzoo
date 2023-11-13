@@ -115,6 +115,15 @@
             <div class="d-grid mt-2 justify-content-center">
                 <span class="footerhead">Open daily:</span>
                 <p class="footer-detail">10AM - 7PM</p>
+                <div class="socials">
+                    <div class="footer-socials justify-content-center">
+                        <span>Follow us:</span>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-tiktok"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer col-3">
