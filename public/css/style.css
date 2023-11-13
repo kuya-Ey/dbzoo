@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 * {
     margin: 0;
@@ -8,30 +9,26 @@
 }
 
 body {
-    /* display: flex; */
     width: 100vw;
     height: 100vh;
-    /* align-items: center; */
-    /* justify-content: center; */
     font-family: 'Poppins', sans-serif;
     background: #D1E8E2;
+    /* background-image: url('/images/landingpage.png');
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.landing {
     background-image: url('/images/landingpage.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-/* .container {
-    width: 100vw;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-} */
-
 .login {
     width: 400px;
     position: fixed;
-    bottom: 100px;
-    left: 100px;
+    bottom: 150px;
+    left: 150px;
 }
 
 .img-welcome {
@@ -43,7 +40,6 @@ body {
 }
 
 .header {
-    /* background-color: bisque; */
     height: 100px;
 }
 
@@ -81,7 +77,6 @@ body {
 
 .mainbar {
     display: flex;
-    /* background-color: antiquewhite; */
     min-height: 650px;
     flex-wrap: wrap;
 }
@@ -140,6 +135,15 @@ body {
 
 .footer-detail:hover {
     color: #E2E2E2;
+}
+
+.footer-socials {
+    font-size: 1.5rem;
+    color: #D4D4D4;
+}
+
+.footer-socials:hover {
+    color: #D4D4D4;
 }
 
 /* products.card2 */
@@ -218,8 +222,8 @@ body {
 
   /* product.show */
   .card2 {
-    height: 600px;
-    width: 490px;
+    height: 550px;
+    width: 690px;
     position: relative;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     border-radius: 16px;

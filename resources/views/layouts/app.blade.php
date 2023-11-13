@@ -23,6 +23,8 @@
     <link href="{{ asset('style.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ url('css/styles.css')}}">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    {{-- bootstrap icons cdn --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
     <div id="app">

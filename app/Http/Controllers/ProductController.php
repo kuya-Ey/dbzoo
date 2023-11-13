@@ -68,7 +68,7 @@ class ProductController extends Controller
             "users" => Auth::id()
         ]);
 
-        return back();
+        return back()->with('success', 'Inventory updated.');
     }
 
     /**

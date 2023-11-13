@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<body class="landing">
 <div class="container-fluid">
-    <div class="logo-login">
+    <div class="d-grid gap-2 d-md-flex justify-content-center logo-login">
         <img src="{{ asset('/images/d_barking_zoo-bg.png')}}" alt="">
     </div>
     <div class="login">
@@ -84,4 +85,5 @@
     </div>
     </div>
 </div>
+</body>
 @endsection

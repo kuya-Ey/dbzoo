@@ -59,7 +59,7 @@ class GroomingServiceController extends Controller
 
         ]);
 
-        return back();
+        return back()->with('success', 'Appointment booked!');
     }
 
     /**
