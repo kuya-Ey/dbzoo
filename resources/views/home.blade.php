@@ -78,7 +78,7 @@
         </div>
         <div class="col-5 gap-4 p-4 position-relative start-0 justify-content-evenly mainbar">
             <div class="card" style="width: 18rem;">
-                <img src="{{ asset('/images/vetconsultation.jpg')}}" class="card-img-top" alt="...">
+                <img src="{{ asset('/images/vetconsultation.jpg')}}" class="card-img-top1" alt="...">
                 <div class="card-body bg-info-subtle">
                     <a href="/consultation/" class="btn btn-primary col-12 mb-1 mt-2">CONSULTATION</a>
                     <p class="tabinfo">From emergency care to routine check ups.</p>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="{{ asset('/images/petgrooming.jpg')}}" class="card-img-top" alt="...">
+                <img src="{{ asset('/images/petgrooming.jpg')}}" class="card-img-top1" alt="...">
                 <div class="card-body bg-info-subtle">
                     <a href="/grooming_service/" class="btn btn-primary col-12 mb-1 mt-2">GROOMING SERVICE</a>
                     <p class="tabinfo">Pet grooming with love.</p>
@@ -94,7 +94,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="{{ asset('/images/pethotel.png')}}" class="card-img-top" alt="...">
+                <img src="{{ asset('/images/pethotel.png')}}" class="card-img-top1" alt="...">
                 <div class="card-body bg-info-subtle">
                     <a href="/pet_boarding/" class="btn btn-primary col-12 mb-1 mt-2">PET BOARDING</a>
                     <p class="tabinfo">Love and care for your pets while you're away.</p>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img src="{{ asset('/images/products.jpg')}}" class="card-img-top" alt="...">
+                <img src="{{ asset('/images/products.jpg')}}" class="card-img-top1" alt="...">
                 <div class="card-body bg-info-subtle">
                     <a href="/products" class="btn btn-primary col-12 mb-1 mt-2">PET SUPPLIES</a>
                     <p class="tabinfo" d-flex justify-content-center>*Products available in-store only.</p>

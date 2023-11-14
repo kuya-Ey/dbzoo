@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         // ORM - Object Relational Mapper
         // SELECT * FROM dbz_db2.products; from MySQL db
-        $products = Product::all();
+        $products = Product::paginate(8);
 
         return view('products.index',[
             'products' => $products

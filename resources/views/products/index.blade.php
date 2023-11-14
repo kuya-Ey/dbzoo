@@ -24,24 +24,22 @@
                 </h3>
             @endif
         </div>
-
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <input class="input" name="text" placeholder="Search..." type="search">
-        </div>
-    <div class="container d-flex gap-4 mt-2 flex-wrap">
-
+        <div class="content">
+    <div class="d-grid gap-2 d-md-flex start-100 justify-content-start">
+        {{ $products->links('pagination::bootstrap-4')}}
+    </div>
+    <div class="container d-flex gap-4 mt-4 flex-wrap">
         @foreach ($products as $product)
-        <div class="card1">
-            <img src= {{asset("storage/". $product->images)}} width="100px" height="100px" class="card-img-top" alt="...">
+        <div class="card1 mb-5">
+            <img src= {{asset("storage/". $product->images)}} class="card-img-top" alt="...">
                 <div class="card-details">
                     <p class="text-title">{{$product->name}}</p>
                 </div>
             <a class="card-button" href="/product/{{ $product->id }}">More info</a>
         </div>
-
         @endforeach
-
     </div>
+        </div>
 </div>
 @endsection
 
