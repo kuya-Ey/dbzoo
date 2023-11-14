@@ -2,10 +2,13 @@
 
 @section('content')
 <div class="container-fluid">
-<div class="header bg-info mb-4 pt-2">
-    <nav class="navbar navbar-light">
+<div class="header bg-info mb-4 pt-2 pb-2">
+    <nav class="navbar navbar-light position-relative">
         <div class="container position-relative">
-            <div class="navbar-brand mb-2 h1">D Barking Zoo</di>
+            <div class="container">
+                <span class="navbar-brand mb-0 h1">D Barking Zoo</span>
+            </div>
+
             <div class="card-body position-absolute top-0 start-50 justify-content-center">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -117,7 +120,7 @@
                 <p class="footer-detail">10AM - 7PM</p>
                 <div class="socials">
                     <div class="footer-socials justify-content-center">
-                        <span>Follow us:</span>
+                        <span class="footer-detail">Follow us:</span>
                             <i class="bi bi-facebook"></i>
                             <i class="bi bi-instagram"></i>
                             <i class="bi bi-twitter"></i>

@@ -92,7 +92,11 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        ddd('this is edit');
+        $product = Product::find($id);
+
+        return view('products.edit', [
+            'product' => $product
+        ]);
     }
 
     /**
@@ -104,7 +108,14 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        Product::where('id', $id)
+        ->update([
+            'quantity' => $request->quantity,
+            'price' => $request->price
+        ]);
+
+        return back()->with('success', 'Updated.');
     }
 
     /**
@@ -115,6 +126,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::where('id', $id)->delete();
+
+        return redirect('/products')->with('success', 'Successfully Deleted.');
     }
 }

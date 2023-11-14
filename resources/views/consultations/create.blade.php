@@ -7,7 +7,9 @@
                 <div class="navbar-brand mb-2 h1">D Barking Zoo</div>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="btn btn-primary" href="/home" role="button">Back</a>
+                <a class="btn btn-primary" href="/home" role="button">
+                    Return <i class="bi bi-arrow-return-left"></i>
+                </a>
             </div>
             </div>
         </nav>
