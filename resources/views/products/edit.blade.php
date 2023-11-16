@@ -7,7 +7,7 @@
                 <div class="navbar-brand mb-2 h1">D Barking Zoo</div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <a class="btn btn-primary" href="/products" role="button">
+                    <a class="btn btn-primary" href="/product/{{ $product->id }}" role="button">
                         Return <i class="bi bi-arrow-return-left"></i>
                     </a>
                 </div>
@@ -64,7 +64,7 @@
                         @enderror
                     </div>
                     <div class="mb-4">
-                        <label for="exampleInputEmail1" class="form-label">Images:</label>
+                        <label for="exampleInputEmail1" class="form-label">Image:</label>
                         <input type="file" readonly class="form-control-plaintext" name="image" value="{{ old('image', $product->image)}}" class="form-control" id="exampleCheck1">
                         @error('image')
                             <div class="alert alert-danger">{{ $message }}</div>

@@ -5,13 +5,31 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-primary-subtle">{{ __('Register') }}</div>
+                <div class="card-header bg-primary-subtle">You're registering as <b>{{ $role->role }}</b></div>
+                {{-- <div class="card-header bg-primary-subtle">{{ __('Register') }}</div> --}}
 
                 <div class="card-body bg-info">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="row mb-3">
+                            <label for="name" class="col-md-4 col-form-label text-md-end">Role</label>
+                            {{-- <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label> --}}
+
+                            <div class="col-md-6">
+                                <input id="role_id" type="text" class="form-control @error('role_id') is-invalid @enderror" name="role_id"
+                                    value="{{ old('role_id', $role->id) }}" required autocomplete="role_id" autofocus>
+
+                                @error('role_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            {{-- <label for="name" class="col-md-4 col-form-label text-md-end">Role</label> --}}
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">

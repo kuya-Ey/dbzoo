@@ -11,9 +11,11 @@
                 <button class="btn btn-primary" type="button" onclick="location.href='/products'">
                     Return <i class="bi bi-arrow-return-left"></i>
                 </button>
+                @if(Auth::user()->role_id==1)
                 <a class="btn btn-primary" href="/product/{{ $product->id }}/edit" role="button">
                     <i class="bi bi-pencil-square"></i> Edit
                 </a>
+                @endif
             </div>
             </div>
         </nav>
@@ -25,7 +27,7 @@
     <div class="showcard ">
         <div class="card2">
         <div class="card-image2">
-            <img src= {{asset("storage/". $product->images)}} width="200px" height="200px" class="card-img-top" alt="...">
+            <img src= {{asset("storage/". $product->images)}} width="690px" height="550px" class="card-img-top2" alt="{{$product->name}}">
         </div>
             <div class="card-description2">
                 <p class="text-title2">{{$product->name}}</p>
@@ -36,16 +38,30 @@
             </div>
 
         </div>
-
+        @if(Auth::user()->role_id==1)
         <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end">
             <form action="/product/{{ $product->id }}" method="post">
                 @csrf
                 @method('delete')
-                <button class="btn btn-danger" type="submit" onclick="location.href='/products/{{ $product->id }}'">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="bi bi-trash"></i> Delete
                 </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-body .col-md-3 .ms-auto">
+                        Are you sure you want to delete this item?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" onclick="location.href='/product/{{ $product->id }}'">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    </div>
+                    </div>
+                    </div>
+                </div>
             </form>
         </div>
+        @endif
     </div>
 </div>
 @endsection
