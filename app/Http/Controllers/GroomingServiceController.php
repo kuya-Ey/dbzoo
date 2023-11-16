@@ -14,10 +14,10 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        $grooming_services = Consultation::all();
+        $grooming_services = GroomingService::all();
 
         return view('grooming_services.index',[
-            'consultations' => $consultations
+            'grooming_services' => $grooming_services
         ]);
     }
 

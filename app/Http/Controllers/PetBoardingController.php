@@ -14,7 +14,11 @@ class PetBoardingController extends Controller
      */
     public function index()
     {
-        ddd('this is index');
+        $pet_boardings = PetBoarding::all();
+
+        return view('pet_boardings.index',[
+            'pet_boardings' => $pet_boardings
+        ]);
     }
 
     /**
