@@ -14,7 +14,11 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        ddd('this is index for groom');
+        $grooming_services = Consultation::all();
+
+        return view('grooming_services.index',[
+            'consultations' => $consultations
+        ]);
     }
 
     /**

@@ -15,8 +15,11 @@ class ConsultationController extends Controller
      */
     public function index()
     {
-        // return view("consultations.index");
-        ddd('this is index');
+        $consultations = Consultation::all();
+
+        return view('consultations.index',[
+            'consultations' => $consultations
+        ]);
     }
 
     /**
