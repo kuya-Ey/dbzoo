@@ -64,7 +64,7 @@
                         @enderror
                     </div>
                     <div class="mb-4">
-                        <label for="exampleInputEmail1" class="form-label">Images:</label>
+                        <label for="exampleInputEmail1" class="form-label">Image:</label>
                         <input type="file" readonly class="form-control-plaintext" name="image" value="{{ old('image', $product->image)}}" class="form-control" id="exampleCheck1">
                         @error('image')
                             <div class="alert alert-danger">{{ $message }}</div>

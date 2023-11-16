@@ -46,21 +46,19 @@ body {
 
 .about {
     padding: 20px;
-    height: 600px;
+    height: 580px;
     justify-content: flex-start;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     text-align: left;
     -o-border-radius: 7px;
     border: 1px solid #19747E;
     background-color: #19747E;
-    color: #e2e2e2;
-    overflow: hidden;
-    -webkit-border-radius: 7px;
+    color: #e2e2e2;    -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     border-radius: 7px;
-    opacity: .7;
+    opacity: .6;
 }
 
 

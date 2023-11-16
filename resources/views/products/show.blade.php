@@ -10,9 +10,11 @@
                 <button class="btn btn-primary" type="button" onclick="location.href='/products'">
                     Return <i class="bi bi-arrow-return-left"></i>
                 </button>
+                @if(Auth::user()->role_id==1)
                 <a class="btn btn-primary" href="/product/{{ $product->id }}/edit" role="button">
                     <i class="bi bi-pencil-square"></i> Edit
                 </a>
+                @endif
             </div>
             </div>
         </nav>
@@ -22,7 +24,7 @@
     <div class="showcard ">
         <div class="card2">
         <div class="card-image2">
-            <img src= {{asset("storage/". $product->images)}} width="690px" height="550px" class="card-img-top2" alt="...">
+            <img src= {{asset("storage/". $product->images)}} width="690px" height="550px" class="card-img-top2" alt="{{$product->name}}">
         </div>
             <div class="card-description2">
                 <p class="text-title2">{{$product->name}}</p>
@@ -31,7 +33,7 @@
                 <p class="text-body2">{{ number_format($product->price, 2)}}</p>
             </div>
         </div>
-
+        @if(Auth::user()->role_id==1)
         <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end">
             <form action="/product/{{ $product->id }}" method="post">
                 @csrf
@@ -54,6 +56,7 @@
                 </div>
             </form>
         </div>
+        @endif
     </div>
 </div>
 @endsection

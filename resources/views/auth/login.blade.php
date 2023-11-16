@@ -11,7 +11,7 @@
             <!-- Button trigger modal -->
             <button class="btn btn-primary btn-lg " type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ENTER</button>
             {{-- Sign up Button --}}
-            <a class="btn btn-info btn-sm" href="{{ route('register') }}" role="button">Sign Up</a>
+            <a class="btn btn-info btn-sm" href="/select-a-role" role="button">Sign Up</a>
         </div>
     </div>
     <!-- Modal -->
