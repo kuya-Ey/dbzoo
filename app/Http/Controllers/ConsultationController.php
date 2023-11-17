@@ -50,8 +50,6 @@ class ConsultationController extends Controller
 
 
         ]);
-        // dd(Auth::id());
-
 
 
         Consultation::create([
@@ -60,7 +58,6 @@ class ConsultationController extends Controller
             "full_name" => $request->fullname,
             "pet_name" => $request->petname,
             "contact_number" => $request->contactnumber,
-            "users" => Auth::id(),
 
 
         ]);
