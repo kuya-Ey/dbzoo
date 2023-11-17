@@ -58,6 +58,8 @@ class ConsultationController extends Controller
             "full_name" => $request->fullname,
             "pet_name" => $request->petname,
             "contact_number" => $request->contactnumber,
+            "users" => Auth::id(),
+            "pets" => 0, //test
 
 
         ]);
