@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Consultation;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class ConsultationController extends Controller
 {
@@ -41,11 +40,11 @@ class ConsultationController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "date" => "required",
-            "time" => "required",
             "fullname" => "required",
             "petname" => "required",
             "contactnumber" => "required|numeric|min:11",
+            "date" => "required",
+            "time" => "required",
 
 
 
@@ -53,11 +52,11 @@ class ConsultationController extends Controller
 
 
         Consultation::create([
-            "date" => $request->date,
-            "time" => $request->time,
             "full_name" => $request->fullname,
             "pet_name" => $request->petname,
             "contact_number" => $request->contactnumber,
+            "date" => $request->date,
+            "time" => $request->time,
 
 
         ]);
