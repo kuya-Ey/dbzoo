@@ -42,7 +42,7 @@ class PetBoardingController extends Controller
         $request->validate([
             "fullname" => "required",
             "petname" => "required",
-            "contactnumber" => "required",
+            "contactnumber" => "required|numeric|min:11",
             "start" => "required",
             "end" => "required",
             "remarks" => "required",

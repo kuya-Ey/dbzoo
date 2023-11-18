@@ -45,7 +45,7 @@ class ConsultationController extends Controller
             "time" => "required",
             "fullname" => "required",
             "petname" => "required",
-            "contactnumber" => "required",
+            "contactnumber" => "required|numeric|min:11",
 
 
 

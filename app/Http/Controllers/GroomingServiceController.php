@@ -42,7 +42,7 @@ class GroomingServiceController extends Controller
         $request->validate([
             "fullname" => "required",
             "address" => "required",
-            "contactnumber" => "required",
+            "contactnumber" => "required|numeric|min:11",
             "date" => "required",
             "time" => "required",
             "remarks" => "required",
