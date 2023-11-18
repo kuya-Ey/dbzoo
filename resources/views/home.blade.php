@@ -6,7 +6,7 @@
         <div class="headboard">
             <div class="row">
                 <div class="headboard-col col-4">
-                    <div class="d-grid justify-content-center pt-3">
+                    <div class="d-grid justify-content-center pt-1">
                         <h2>D Barking Zoo</h2>
                     </div>
                 </div>
@@ -167,7 +167,6 @@
     </div>
 </div>
 </div>
-
 
 
 

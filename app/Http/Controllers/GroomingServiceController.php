@@ -14,7 +14,11 @@ class GroomingServiceController extends Controller
      */
     public function index()
     {
-        ddd('this is index for groom');
+        $grooming_services = GroomingService::all();
+
+        return view('grooming_services.index',[
+            'grooming_services' => $grooming_services
+        ]);
     }
 
     /**
@@ -38,7 +42,7 @@ class GroomingServiceController extends Controller
         $request->validate([
             "fullname" => "required",
             "address" => "required",
-            "contactnumber" => "required",
+            "contactnumber" => "required|numeric|min:11",
             "date" => "required",
             "time" => "required",
             "remarks" => "required",

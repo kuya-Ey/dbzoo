@@ -15,8 +15,11 @@ class ConsultationController extends Controller
      */
     public function index()
     {
-        // return view("consultations.index");
-        ddd('this is index');
+        $consultations = Consultation::all();
+
+        return view('consultations.index',[
+            'consultations' => $consultations
+        ]);
     }
 
     /**
@@ -42,13 +45,11 @@ class ConsultationController extends Controller
             "time" => "required",
             "fullname" => "required",
             "petname" => "required",
-            "contactnumber" => "required",
+            "contactnumber" => "required|numeric|min:11",
 
 
 
         ]);
-        // dd(Auth::id());
-
 
 
         Consultation::create([
@@ -57,7 +58,6 @@ class ConsultationController extends Controller
             "full_name" => $request->fullname,
             "pet_name" => $request->petname,
             "contact_number" => $request->contactnumber,
-            "users" => Auth::id(),
 
 
         ]);

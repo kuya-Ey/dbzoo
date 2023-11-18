@@ -10,6 +10,6 @@ class Consultation extends Model
     use HasFactory;
 
     protected $table = 'consultations';
-    protected $fillable = ["date" , "time" , "full_name" , "pet_name" , "contact_number", "users",];
+    protected $fillable = ["date" , "time" , "full_name" , "pet_name" , "contact_number", "users", "pets"];
     public $timestamps = false;
 }
