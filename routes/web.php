@@ -1,5 +1,5 @@
 <?php
-
+// routes/web.php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PetBoardingController;

@@ -1,4 +1,5 @@
 <?php
+// app/Http/Controllers/ProductController.php
 
 namespace App\Http\Controllers;
 
@@ -107,13 +108,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
 
         Product::where('id', $id)
         ->update([
-            'quantity' => $request->quantity,
-            'price' => $request->price
+            'quantity' => request("quantity"),
+            'price' => request("price")
         ]);
 
         return back()->with('success', 'Updated.');
