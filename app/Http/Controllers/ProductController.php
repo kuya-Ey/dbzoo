@@ -113,8 +113,8 @@ class ProductController extends Controller
 
         Product::where('id', $id)
         ->update([
-            'quantity' => $request->quantity,
-            'price' => $request->price
+            'quantity' => request("quantity"),
+            'price' => request("price")
         ]);
 
         return back()->with('success', 'Updated.');
